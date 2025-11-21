@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши питомцы - HappyTails</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="normalize.css">
+<script src="main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </a>
+                
+                <!-- Гамбургер-меню на CSS (чекбокс перед навигацией для корректной работы селектора ~ ) -->
+                <input type="checkbox" id="burger-toggle" class="burger-toggle">
+                <label for="burger-toggle" class="burger" aria-label="Открыть меню" title="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="pets.html" class="nav__link active">Наши питомцы</a></li>
+                        <li class="nav__item"><a href="help.html" class="nav__link">Как помочь</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Наши питомцы</h1>
+                <p class="page-subtitle">Каждое из этих животных ищет любящую семью</p>
+            </div>
+        </section>
+
+        <!-- Фильтры через CSS -->
+        <section class="pets-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <a href="#all" class="filter-btn active">Все</a>
+                    <a href="#dogs" class="filter-btn">Собаки</a>
+                    <a href="#cats" class="filter-btn">Кошки</a>
+                    <a href="#others" class="filter-btn">Другие</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pets-catalog">
+            <div class="container">
+                <div class="pets-grid">
+                    <!-- Собаки -->
+                    <article class="pet-card" data-category="dog">
+                        <div class="pet-card__image">
+                            <img src="dog1.jpg" alt="Собака Барсик" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Барсик</h3>
+                            <p class="pet-card__info">Возраст: 2 года</p>
+                            <p class="pet-card__info">Порода: Дворняжка</p>
+                            <p class="pet-card__info">Пол: Мальчик</p>
+                            <p class="pet-card__description">Очень дружелюбный и активный пёс. Любит долгие прогулки и игры с мячом.</p>
+                            <a href="#modal-barsik" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card" data-category="dog">
+                        <div class="pet-card__image">
+                            <img src="ovcharka.jpg" alt="Собака Рекс" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Рекс</h3>
+                            <p class="pet-card__info">Возраст: 3 года</p>
+                            <p class="pet-card__info">Порода: Овчарка</p>
+                            <p class="pet-card__info">Пол: Мальчик</p>
+                            <p class="pet-card__description">Умный и преданный пёс. Нуждается в активном хозяине с опытом.</p>
+                            <a href="#modal-rex" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card" data-category="dog">
+                        <div class="pet-card__image">
+                            <img src="labrador.jpg" alt="Собака Лаки" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Лаки</h3>
+                            <p class="pet-card__info">Возраст: 4 месяца</p>
+                            <p class="pet-card__info">Порода: Лабрадор</p>
+                            <p class="pet-card__info">Пол: Девочка</p>
+                            <p class="pet-card__description">Веселый щенок, полный энергии. Обучается командам, очень умная.</p>
+                            <a href="#modal-lucky" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card" data-category="dog">
+                        <div class="pet-card__image">
+                            <img src="taxa.jpeg" alt="Собака Джесси" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Джесси</h3>
+                            <p class="pet-card__info">Возраст: 5 лет</p>
+                            <p class="pet-card__info">Порода: Такса</p>
+                            <p class="pet-card__info">Пол: Девочка</p>
+                            <p class="pet-card__description">Спокойная и умная собака. Отлично ладит с детьми и другими животными.</p>
+                            <a href="#modal-jessie" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <!-- Кошки -->
+                    <article class="pet-card" data-category="cat">
+                        <div class="pet-card__image">
+                            <img src="cat1.jpg" alt="Кошка Муся" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Муся</h3>
+                            <p class="pet-card__info">Возраст: 1.5 года</p>
+                            <p class="pet-card__info">Порода: Европейская</p>
+                            <p class="pet-card__info">Пол: Девочка</p>
+                            <p class="pet-card__description">Ласковая и спокойная кошка. Идеально подойдет для семьи с детьми.</p>
+                            <a href="#modal-musia" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card" data-category="cat">
+                        <div class="pet-card__image">
+                            <img src="cat2.jpg" alt="Кот Вася" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Вася</h3>
+                            <p class="pet-card__info">Возраст: 2 года</p>
+                            <p class="pet-card__info">Порода: Британский</p>
+                            <p class="pet-card__info">Пол: Мальчик</p>
+                            <p class="pet-card__description">Независимый и умный кот. Любит наблюдать за происходящим с высоты.</p>
+                            <a href="#modal-vasya" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="pet-card" data-category="cat">
+                        <div class="pet-card__image">
+                            <img src="cat3.jpg" alt="Кошка Соня" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Соня</h3>
+                            <p class="pet-card__info">Возраст: 3 года</p>
+                            <p class="pet-card__info">Порода: Сиамская</p>
+                            <p class="pet-card__info">Пол: Девочка</p>
+                            <p class="pet-card__description">Элегантная и разговорчивая кошка. Любит внимание и ласку.</p>
+                            <a href="#modal-sonya" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <!-- Другие животные -->
+                    <article class="pet-card" data-category="other">
+                        <div class="pet-card__image">
+                            <img src="krolik.jpg" alt="Кролик Пушистик" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Пушистик</h3>
+                            <p class="pet-card__info">Возраст: 1 год</p>
+                            <p class="pet-card__info">Вид: Карликовый кролик</p>
+                            <p class="pet-card__info">Пол: Мальчик</p>
+                            <p class="pet-card__description">Милый и дружелюбный кролик. Приучен к лотку, любит овощи.</p>
+                            <a href="#modal-fluffy" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Тот же футер что в index.html -->
+         <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <!-- Информация о приюте -->
+            <div class="footer__info">
+                <div class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </div>
+                <p class="footer__text">Приют для животных, где каждый найдет друга. Дарим любовь и заботу с 2015 года.</p>
+            </div>
+            
+            <!-- Быстрые ссылки -->
+            <div class="footer__links">
+                <h3 class="footer__title">Быстрые ссылки</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html" class="footer__link">Главная</a></li>
+                    <li><a href="pets.html" class="footer__link">Наши питомцы</a></li>
+                    <li><a href="help.html" class="footer__link">Как помочь</a></li>
+                    <li><a href="about.html" class="footer__link">О нас</a></li>
+                    <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                </ul>
+            </div>
+            
+            <!-- Контакты -->
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты</h3>
+                <address class="footer__address">
+                    <p>📍 г. Алматы, ул.Майлина, 15</p>
+                    <p>📞 +7 (795) 123-45-67</p>
+                    <p>📧 info@happytails.kz</p>
+                    <p>🕒 Ежедневно 9:00-20:00</p>
+                </address>
+            </div>
+            
+            <!-- Соцсети -->
+            <div class="footer__social">
+                <h3 class="footer__title">Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="ВКонтакте">
+                        <span>VK</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <span>TG</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <span>IG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижняя часть футера -->
+        <div class="footer__bottom">
+            <p>&copy; 2025 HappyTails. Все права защищены.</p>
+            <p>Сделано с ❤️ для бездомных животных</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

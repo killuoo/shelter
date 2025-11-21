@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - HappyTails</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <header class="header">
+          <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </a>
+                
+                <!-- Гамбургер-меню для мобильных -->
+                <input type="checkbox" id="burger-toggle" class="burger-toggle">
+                <label for="burger-toggle" class="burger" aria-label="Открыть меню" title="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="pets.html" class="nav__link">Наши питомцы</a></li>
+                        <li class="nav__item"><a href="help.html" class="nav__link">Как помочь</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Контакты</h1>
+                <p class="page-subtitle">Свяжитесь с нами любым удобным способом</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <h3 class="contact-card__title">🏠 Адрес приюта</h3>
+                        <address>
+                            <p>г. Алматы, ул. Майлина, 15</p>
+                            <p>Ближайшее метро: Райымбека</p>
+                            <p>Время работы: ежедневно 9:00-20:00</p>
+                        </address>
+                    </article>
+
+                    <article class="contact-card">
+                        <h3 class="contact-card__title">📞 Телефоны</h3>
+                        <p>+7 (775) 123-45-67 - общие вопросы</p>
+                        <p>+7 (775) 123-45-68 - волонтёрам</p>
+                        <p>+7 (775) 123-45-69 - экстренные случаи</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <h3 class="contact-card__title">✉️ Электронная почта</h3>
+                        <p>info@happytails.kz - общие вопросы</p>
+                        <p>volunteer@happytails.kz - волонтёрам</p>
+                        <p>help@happytails.kz - помощь приюту</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <h3 class="contact-card__title">🌐 Социальные сети</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">ВКонтакте</a>
+                            <a href="#" class="social-link">Telegram</a>
+                            <a href="#" class="social-link">Instagram</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container">
+                <h2 class="section-title">Форма обратной связи</h2>
+                <form class="form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Ваше имя *</label>
+                        <input type="text" id="contact-name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email *</label>
+                        <input type="email" id="contact-email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-phone" class="form-label">Телефон</label>
+                        <input type="tel" id="contact-phone" name="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-subject" class="form-label">Тема сообщения</label>
+                        <select id="contact-subject" name="subject" class="form-select">
+                            <option value="">Выберите тему</option>
+                            <option value="adoption">Хочу забрать питомца</option>
+                            <option value="volunteer">Хочу стать волонтёром</option>
+                            <option value="help">Хочу помочь приюту</option>
+                            <option value="question">Вопрос о работе приюта</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">Сообщение *</label>
+                        <textarea id="contact-message" name="message" class="form-textarea" rows="5" required placeholder="Опишите вашу ситуацию или вопрос..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container">
+                <h2 class="section-title">Как нас найти</h2>
+                <div class="map-placeholder">
+                    <img src="map.jpg" alt="Карта расположения приюта HappyTails" width="800" height="400" loading="lazy">
+                    <div class="map-overlay">
+                        <p>г. Алматы, ул. Майлина, 15</p>
+                        <p>🚇 м. Райымбека (5 минут пешком)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Тот же футер -->
+         <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <!-- Информация о приюте -->
+            <div class="footer__info">
+                <div class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </div>
+                <p class="footer__text">Приют для животных, где каждый найдет друга. Дарим любовь и заботу с 2015 года.</p>
+            </div>
+            
+            <!-- Быстрые ссылки -->
+            <div class="footer__links">
+                <h3 class="footer__title">Быстрые ссылки</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html" class="footer__link">Главная</a></li>
+                    <li><a href="pets.html" class="footer__link">Наши питомцы</a></li>
+                    <li><a href="help.html" class="footer__link">Как помочь</a></li>
+                    <li><a href="about.html" class="footer__link">О нас</a></li>
+                    <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                </ul>
+            </div>
+            
+            <!-- Контакты -->
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты</h3>
+                <address class="footer__address">
+                    <p>📍 г. Алматы, ул. Майлина, 15</p>
+                    <p>📞 +7 (795) 123-45-67</p>
+                    <p>📧 info@happytails.kz</p>
+                    <p>🕒 Ежедневно 9:00-20:00</p>
+                </address>
+            </div>
+            
+            <!-- Соцсети -->
+            <div class="footer__social">
+                <h3 class="footer__title">Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="ВКонтакте">
+                        <span>VK</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <span>TG</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <span>IG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижняя часть футера -->
+        <div class="footer__bottom">
+            <p>&copy; 2025 HappyTails. Все права защищены.</p>
+            <p>Сделано с ❤️ для бездомных животных</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

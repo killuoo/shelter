@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyTails - Приют для животных</title>
+    <meta name="description" content="Приют HappyTails - подари дом другу! Мы спасаем, лечим и находим дом для бездомных животных.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+   <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="normalize.css">
+<script src="main.js"></script>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </a>
+                
+                  <!-- Гамбургер-меню на CSS (чекбокс перед навигацией для корректной работы селектора ~ ) -->
+                <input type="checkbox" id="burger-toggle" class="burger-toggle">
+                <label for="burger-toggle" class="burger" aria-label="Открыть меню" title="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Навигация -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active">Главная</a></li>
+                        <li class="nav__item"><a href="pets.html" class="nav__link">Наши питомцы</a></li>
+                        <li class="nav__item"><a href="help.html" class="nav__link">Как помочь</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Баннер -->
+        <section class="banner">
+            <div class="container">
+                <div class="banner__content">
+                    <h1 class="banner__title">Подари дом другу</h1>
+                    <p class="banner__text">Каждое животное заслуживает любящую семью и теплый дом. Присоединяйтесь к нашей миссии!</p>
+                    <div class="banner__buttons">
+                        <a href="pets.html" class="btn btn--primary">Посмотреть питомцев</a>
+                        <a href="help.html" class="btn btn--secondary">Помочь приюту</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Миссия -->
+        <section class="mission">
+            <div class="container">
+                <h2 class="section-title">Наша миссия</h2>
+                <p class="mission__text">Мы спасаем бездомных животных, обеспечиваем им медицинскую помощь, реабилитацию и находим любящие семьи. С 2015 года мы помогли более 2000 животных обрести новый дом.</p>
+            </div>
+        </section>
+
+        <!-- Особенности -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="features__grid">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🐕</div>
+                        <h3 class="feature-card__title">Спасаем</h3>
+                        <p class="feature-card__text">Ежедневно помогаем животным, оказавшимся на улице. Быстро реагируем на вызовы.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🏥</div>
+                        <h3 class="feature-card__title">Лечим</h3>
+                        <p class="feature-card__text">Обеспечиваем полноценную ветеринарную помощь, вакцинацию и стерилизацию.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">🏠</div>
+                        <h3 class="feature-card__title">Находим дом</h3>
+                        <p class="feature-card__text">Тщательно подбираем семьи и сопровождаем процесс адаптации животного.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">❤️</div>
+                        <h3 class="feature-card__title">Заботимся</h3>
+                        <p class="feature-card__text">Окружаем теплом и заботой каждого подопечного до момента устройства в семью.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Питомцы недели -->
+        <section class="weekly-pets">
+            <div class="container">
+                <h2 class="section-title">Наши подопечные недели</h2>
+                <div class="pets-grid">
+                    <!-- Карточка 1 -->
+                    <article class="pet-card">
+                        <div class="pet-card__image">
+                            <img src="dog1.jpg" alt="Собака Барсик" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Барсик</h3>
+                            <p class="pet-card__info">Возраст: 2 года</p>
+                            <p class="pet-card__info">Порода: Дворняжка</p>
+                            <p class="pet-card__description">Добрый и игривый пёс, ищет активную семью. Любит долгие прогулки.</p>
+                            <a href="#modal-barsik" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="pet-card">
+                        <div class="pet-card__image">
+                            <img src="cat1.jpg" alt="Кошка Муся" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Муся</h3>
+                            <p class="pet-card__info">Возраст: 1.5 года</p>
+                            <p class="pet-card__info">Порода: Европейская</p>
+                            <p class="pet-card__description">Ласковая кошка, любит внимание и уют. Идеально подойдет для семьи.</p>
+                            <a href="#modal-musia" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="pet-card">
+                        <div class="pet-card__image">
+                            <img src="ovcharka.jpg" alt="Собака Рекс" width="300" height="200" loading="lazy">
+                        </div>
+                        <div class="pet-card__content">
+                            <h3 class="pet-card__name">Рекс</h3>
+                            <p class="pet-card__info">Возраст: 3 года</p>
+                            <p class="pet-card__info">Порода: Овчарка</p>
+                            <p class="pet-card__description">Верный друг, нуждается в опытном хозяине. Очень умный и преданный.</p>
+                            <a href="#modal-rex" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="weekly-pets__action">
+                    <a href="pets.html" class="btn btn--secondary">Посмотреть всех питомцев</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальные окна для питомцев -->
+        <div class="modal" id="modal-barsik">
+            <div class="modal__content">
+                <a href="#" class="modal__close">&times;</a>
+                <h2>Барсик</h2>
+                <img src="https://placehold.co/400x300/4A90E2/FFFFFF?text=Барсик" alt="Барсик" width="400" height="300">
+                <p><strong>Возраст:</strong> 2 года</p>
+                <p><strong>Порода:</strong> Дворняжка</p>
+                <p><strong>Характер:</strong> Активный, дружелюбный, любит игры</p>
+                <p>Барсик был найден на улице щенком. Он очень общительный и хорошо ладит с другими животными.</p>
+                <a href="contacts.html" class="btn btn--primary">Забрать домой</a>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-musia">
+            <div class="modal__content">
+                <a href="#" class="modal__close">&times;</a>
+                <h2>Муся</h2>
+                <img src="https://placehold.co/400x300/50C878/FFFFFF?text=Муся" alt="Муся" width="400" height="300">
+                <p><strong>Возраст:</strong> 1.5 года</p>
+                <p><strong>Порода:</strong> Европейская</p>
+                <p><strong>Характер:</strong> Спокойная, ласковая, ручная</p>
+                <p>Мусю принесли в приют, когда у хозяев появилась аллергия. Она идеально подходит для квартиры.</p>
+                <a href="contacts.html" class="btn btn--primary">Забрать домой</a>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-rex">
+            <div class="modal__content">
+                <a href="#" class="modal__close">&times;</a>
+                <h2>Рекс</h2>
+                <img src="https://placehold.co/400x300/FF6B6B/FFFFFF?text=Рекс" alt="Рекс" width="400" height="300">
+                <p><strong>Возраст:</strong> 3 года</p>
+                <p><strong>Порода:</strong> Овчарка</p>
+                <p><strong>Характер:</strong> Умный, преданный, нуждается в активности</p>
+                <p>Рекс прошел базовую дрессировку. Идеален для активных людей, любящих длительные прогулки.</p>
+                <a href="contacts.html" class="btn btn--primary">Забрать домой</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="logo">
+                        <span class="logo__icon">🐾</span>
+                        <span class="logo__text">HappyTails</span>
+                    </div>
+                    <p class="footer__text">Приют для животных, где каждый найдет друга. Дарим любовь и заботу с 2015 года.</p>
+                </div>
+                
+                <div class="footer__social">
+                    <h3 class="footer__title">Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                
+                <div class="footer__contacts">
+                    <h3 class="footer__title">Контакты</h3>
+                    <address>
+                        <p>г. Алматы,ул.Майлина 15</p>
+                        <p>+7 (775) 123-45-67</p>
+                        <p>info@happytails.kz</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 HappyTails. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

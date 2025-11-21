@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как помочь - HappyTails</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </a>
+                
+                <!-- Гамбургер-меню на CSS (чекбокс перед навигацией для корректной работы селектора ~ ) -->
+                <input type="checkbox" id="burger-toggle" class="burger-toggle">
+                <label for="burger-toggle" class="burger" aria-label="Открыть меню" title="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="pets.html" class="nav__link">Наши питомцы</a></li>
+                        <li class="nav__item"><a href="help.html" class="nav__link">Как помочь</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Как помочь приюту</h1>
+                <p class="page-subtitle">Ваша поддержка спасает жизни</p>
+            </div>
+        </section>
+
+        <section class="help-options">
+            <div class="container">
+                <div class="help-grid">
+                    <article class="help-card">
+                        <div class="help-card__icon">🥣</div>
+                        <h3 class="help-card__title">Пожертвовать корм</h3>
+                        <p class="help-card__text">Нам всегда нужны корма для собак и кошек, лакомства, витамины и наполнители.</p>
+                        <a href="#food-details" class="btn btn--primary">Что нужно?</a>
+                    </article>
+
+                    <article class="help-card">
+                        <div class="help-card__icon">💸</div>
+                        <h3 class="help-card__title">Финансовая помощь</h3>
+                        <p class="help-card__text">Деньги идут на лечение, стерилизацию, вакцинацию и содержание животных.</p>
+                        <a href="#donate-details" class="btn btn--primary">Помочь деньгами</a>
+                    </article>
+
+                    <article class="help-card">
+                        <div class="help-card__icon">🐕</div>
+                        <h3 class="help-card__title">Стать волонтёром</h3>
+                        <p class="help-card__text">Помогите с выгулом, уборкой, социализацией животных или организацией мероприятий.</p>
+                        <a href="#volunteer-form" class="btn btn--primary">Стать волонтёром</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-details" id="food-details">
+            <div class="container">
+                <h2 class="section-title">Что нужно приюту</h2>
+                <div class="needs-grid">
+                    <div class="need-item">
+                        <h3>🍗 Корма</h3>
+                        <ul>
+                            <li>Сухой корм для собак и кошек</li>
+                            <li>Влажный корм</li>
+                            <li>Лакомства и витамины</li>
+                        </ul>
+                    </div>
+                    <div class="need-item">
+                        <h3>🏠 Оборудование</h3>
+                        <ul>
+                            <li>Миски, лежанки, переноски</li>
+                            <li>Поводки, ошейники, шлейки</li>
+                            <li>Игрушки для животных</li>
+                        </ul>
+                    </div>
+                    <div class="need-item">
+                        <h3>💊 Медицина</h3>
+                        <ul>
+                            <li>Перевязочные материалы</li>
+                            <li>Антипаразитарные средства</li>
+                            <li>Препараты по списку ветеринара</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-form" id="volunteer-form">
+            <div class="container">
+                <h2 class="section-title">Стать волонтёром</h2>
+                <form class="form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Ваше имя *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Чем вы можете помочь?</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="help_type" value="walking"> Выгул животных
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="help_type" value="cleaning"> Уборка помещений
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="help_type" value="socialization"> Социализация животных
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="help_type" value="events"> Помощь на мероприятиях
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Дополнительная информация</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Расскажите о себе, опыте, пожеланиях..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Тот же футер -->
+         <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <!-- Информация о приюте -->
+            <div class="footer__info">
+                <div class="logo">
+                    <span class="logo__icon">🐾</span>
+                    <span class="logo__text">HappyTails</span>
+                </div>
+                <p class="footer__text">Приют для животных, где каждый найдет друга. Дарим любовь и заботу с 2015 года.</p>
+            </div>
+            
+            <!-- Быстрые ссылки -->
+            <div class="footer__links">
+                <h3 class="footer__title">Быстрые ссылки</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html" class="footer__link">Главная</a></li>
+                    <li><a href="pets.html" class="footer__link">Наши питомцы</a></li>
+                    <li><a href="help.html" class="footer__link">Как помочь</a></li>
+                    <li><a href="about.html" class="footer__link">О нас</a></li>
+                    <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                </ul>
+            </div>
+            
+            <!-- Контакты -->
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты</h3>
+                <address class="footer__address">
+                    <p>📍 г. Алматы, ул.Майлина, 15</p>
+                    <p>📞 +7 (795) 123-45-67</p>
+                    <p>📧 info@happytails.kz</p>
+                    <p>🕒 Ежедневно 9:00-20:00</p>
+                </address>
+            </div>
+            
+            <!-- Соцсети -->
+            <div class="footer__social">
+                <h3 class="footer__title">Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="ВКонтакте">
+                        <span>VK</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <span>TG</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <span>IG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижняя часть футера -->
+        <div class="footer__bottom">
+            <p>&copy; 2024 HappyTails. Все права защищены.</p>
+            <p>Сделано с ❤️ для бездомных животных</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
